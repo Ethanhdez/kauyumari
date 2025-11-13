@@ -31,8 +31,6 @@ body {
   font-weight: 700;
   font-size: 1.9rem;
   letter-spacing: 2px;
-  text-decoration: none;
-  user-select: none;
 }
 /* Estilo para logo con enlace */
 .logo-link {
@@ -49,7 +47,6 @@ body {
 .logo-link:hover,
 .logo-link:focus {
   color: var(--ocre);
-  text-decoration: underline;
 }
 
 /* Encabezado */
@@ -337,5 +334,6 @@ body {
     position: relative;
   }
 }
+
 
 
