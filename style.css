@@ -26,23 +26,22 @@ body {
   font-size: 1.1rem;
 }
 
-/* Estilo para logo con enlace (unificado tamaño, color y fuente) */
+/* Estilo para logo con enlace (unificado tamaño, color, tipo letra) */
 .logo-link {
   color: var(--terracota-suave);
   font-family: 'Georgia', serif;
   font-weight: 700;
   font-size: 1.9rem;
   letter-spacing: 2px;
-  text-decoration: none;  /* Sin línea */
+  text-decoration: none;
   cursor: pointer;
   user-select: none;
 }
 
-/* Evitar subrayado en hover/focus */
 .logo-link:hover,
 .logo-link:focus {
   color: var(--ocre);
-  text-decoration: none;  /* No subrayar al pasar el cursor */
+  text-decoration: none;
 }
 
 /* Encabezado */
@@ -136,7 +135,7 @@ body {
   color: var(--beige-suave);
 }
 
-/* Secciones con fondo negro a pantalla completa */
+/* Secciones fondo negro ancho completo */
 .dark-bg-full {
   background-color: var(--negro-mate);
   padding: 5rem 0 6rem;
@@ -168,7 +167,7 @@ body {
   color: #ddd;
 }
 
-/* Galería con grid */
+/* Grid productos */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -179,7 +178,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Tarjetas */
+/* Tarjetas producto */
 .card {
   background-color: #222222;
   border: 1.8px solid #444444;
@@ -226,7 +225,7 @@ body {
   color: #f0a964;
 }
 
-/* Animación hover */
+/* Animación hover tarjetas */
 .card.hovered {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 14px 38px rgba(240, 169, 100, 0.65);
@@ -280,7 +279,7 @@ body {
   color: var(--ocre);
 }
 
-/* Botón centrado bajo galerías */
+/* Botón centrado debajo de galerías */
 .btn-container {
   margin-top: 2.5rem;
   text-align: center;
@@ -306,7 +305,7 @@ body {
   color: var(--beige-suave);
 }
 
-/* Responsive para menú móvil */
+/* Responsive menú móvil */
 @media (max-width: 768px) {
   .nav ul {
     flex-direction: column;
