@@ -1,11 +1,10 @@
-/* Reset */
+/* Reset y paleta cálida similar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Colores cálidos y sobrios */
 :root {
   --negro-mate: #1b1b1b;
   --marron-tierra: #5a3e2b;
@@ -18,7 +17,7 @@
   --gris-suave: #777777;
 }
 
-/* Tipografía */
+/* Tipografía base */
 body {
   font-family: "Merriweather", serif, Georgia, serif;
   background-color: var(--beige-suave);
@@ -51,7 +50,6 @@ body {
   color: var(--terracota-suave);
 }
 
-/* Navegación */
 .nav ul {
   list-style: none;
   display: flex;
@@ -71,7 +69,6 @@ body {
   border-color: var(--terracota-suave);
 }
 
-/* Botón menú móvil */
 #menu-toggle {
   display: none;
   font-size: 2rem;
@@ -79,7 +76,7 @@ body {
   color: var(--ocre);
 }
 
-/* Hero */
+/* HERO */
 .hero {
   background: linear-gradient(135deg, var(--terracota-suave), var(--marron-tierra));
   color: var(--beige-suave);
@@ -127,55 +124,48 @@ body {
   color: var(--beige-suave);
 }
 
-/* Fondo negro ancho completo sin margen ni padding */
-.dark-bg-full-width {
+/* ******** SECCIONES CON FONDO NEGRO A ANCHO COMPLETO ******** */
+.dark-bg-full {
   background-color: var(--negro-mate);
+  padding: 5rem 0 6rem;
   color: #eee;
-  padding-top: 3rem;
-  padding-bottom: 6rem;
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-/* Contenedores internos para limitar ancho y centrar */
-.gallery-container,
-.about-container {
+/* Mantener contenido centrado, ancho estándar y vertical padding */
+.dark-bg-full h2 {
+  font-weight: 900;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #f0a964;
+  letter-spacing: 1.3px;
+  font-family: 'Georgia', serif;
+}
+
+/* Galería - se adapta dentro de la sección */
+.dark-bg-full .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
   max-width: 1100px;
   margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
-/* Títulos y textos en fondo negro */
-.dark-bg-full-width h2 {
-  color: #f0a964; /* cálido claro */
-  font-weight: 900;
-  font-size: 2.8rem;
-  margin-bottom: 2.5rem;
-  text-align: center;
-  letter-spacing: 1.2px;
-}
-
-.dark-bg-full-width p,
-.dark-bg-full-width .price,
-.dark-bg-full-width .card h3,
-.dark-bg-full-width .card p {
-  color: #ddd;
-}
-
-/* Galería grilla */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.8rem;
-}
-
-/* Tarjetas */
-.card {
+/* Tarjetas con fondo oscuro dentro del fondo negro */
+.dark-bg-full .card {
   background-color: #222222;
   border: 1.8px solid #444444;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -184,7 +174,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card img {
+.dark-bg-full .card img {
   width: 100%;
   height: 210px;
   object-fit: cover;
@@ -193,44 +183,44 @@ body {
   background-color: var(--negro-mate);
 }
 
-.card h3 {
+.dark-bg-full .card h3 {
   font-family: 'Palatino Linotype', serif;
   font-weight: 700;
-  font-size: 1.3rem;
-  margin: 1.1rem 1.2rem 0.7rem;
+  font-size: 1.35rem;
+  margin: 1rem 1.2rem 0.8rem;
   color: #ddd;
 }
 
-.card p {
+.dark-bg-full .card p {
   font-size: 1rem;
-  padding: 0 1.2rem 1.4rem;
-  line-height: 1.35;
+  padding: 0 1.2rem 1.6rem;
+  line-height: 1.4;
   flex-grow: 1;
   color: #ccc;
 }
 
-.price {
+.dark-bg-full .price {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   padding: 0 1.2rem 1.5rem;
   font-family: 'Georgia', serif;
   color: #f0a964;
 }
 
-/* Hover tarjetas */
-.card.hovered {
+/* Hover en tarjetas */
+.dark-bg-full .card.hovered {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 12px 38px rgba(240, 169, 100, 0.6);
+  box-shadow: 0 14px 38px rgba(240, 169, 100, 0.65);
 }
-.card.hovered img {
+.dark-bg-full .card.hovered img {
   transform: scale(1.07);
 }
 
-/* Sección Acerca */
-.about-container p {
+/* Sección acerca - texto centrado */
+.about-section.dark-bg-full p {
   font-family: 'Georgia', serif;
-  font-size: 1.15rem;
-  line-height: 1.65;
+  font-size: 1.22rem;
+  line-height: 1.7;
   max-width: 900px;
   margin: 0 auto;
   color: #ddd;
