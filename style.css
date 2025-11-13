@@ -32,7 +32,6 @@ body {
   font-size: 1.9rem;
   letter-spacing: 2px;
   text-decoration: none;
-  cursor: pointer;
   user-select: none;
 }
 /* Estilo para logo con enlace */
@@ -338,4 +337,5 @@ body {
     position: relative;
   }
 }
+
 
