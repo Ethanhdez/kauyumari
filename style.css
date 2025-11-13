@@ -25,7 +25,7 @@ body {
   line-height: 1.7;
   font-size: 1.1rem;
 }
-.logo {
+.logos {
   color: var(--terracota-suave);
   font-family: 'Georgia', serif;
   font-weight: 700;
@@ -334,6 +334,7 @@ body {
     position: relative;
   }
 }
+
 
 
 
