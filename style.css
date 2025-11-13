@@ -1,10 +1,11 @@
-/* Reset y variables */
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Variables de color cálidos y tierra */
 :root {
   --negro-mate: #1b1b1b;
   --marron-tierra: #5a3e2b;
@@ -17,7 +18,7 @@
   --gris-suave: #777777;
 }
 
-/* Tipografía base */
+/* Tipografía y cuerpo */
 body {
   font-family: "Merriweather", serif, Georgia, serif;
   background-color: var(--beige-suave);
@@ -36,8 +37,8 @@ body {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   user-select: none;
 }
 
@@ -50,6 +51,7 @@ body {
   color: var(--terracota-suave);
 }
 
+/* Navegación */
 .nav ul {
   list-style: none;
   display: flex;
@@ -69,6 +71,7 @@ body {
   border-color: var(--terracota-suave);
 }
 
+/* Botón hamburguesa - móvil */
 #menu-toggle {
   display: none;
   font-size: 2rem;
@@ -76,14 +79,14 @@ body {
   color: var(--ocre);
 }
 
-/* Hero */
+/* Sección Hero principal */
 .hero {
   background: linear-gradient(135deg, var(--terracota-suave), var(--marron-tierra));
   color: var(--beige-suave);
   padding: 6rem 2rem 8rem;
   text-align: center;
   font-family: 'Georgia', serif;
-  box-shadow: inset 0 0 250px 30px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 250px 30px rgba(0, 0, 0, 0.3);
   user-select: none;
 }
 
@@ -93,7 +96,7 @@ body {
   max-width: 700px;
   margin: 0 auto 1rem;
   letter-spacing: 1.8px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero p {
@@ -102,7 +105,7 @@ body {
   margin: 0 auto 2.3rem;
   font-style: italic;
   line-height: 1.5;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.55);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.55);
 }
 
 .btn-primary {
@@ -114,7 +117,7 @@ body {
   border-radius: 40px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -124,7 +127,7 @@ body {
   color: var(--beige-suave);
 }
 
-/* Fondo negro completo para secciones principales */
+/* Secciones con fondo negro a pantalla completa */
 .dark-bg-full {
   background-color: var(--negro-mate);
   padding: 5rem 0 6rem;
@@ -139,7 +142,7 @@ body {
   text-align: center;
 }
 
-/* Títulos y texto */
+/* Títulos y textos en fondo negro */
 .dark-bg-full h2 {
   font-weight: 900;
   font-size: 3rem;
@@ -156,7 +159,7 @@ body {
   color: #ddd;
 }
 
-/* Galería diseñada como grid */
+/* Galería - estructura grid */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -167,7 +170,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Tarjetas */
+/* Tarjetas de producto */
 .card {
   background-color: #222222;
   border: 1.8px solid #444444;
@@ -214,7 +217,7 @@ body {
   color: #f0a964;
 }
 
-/* Hover en tarjetas */
+/* Animación hover en tarjeta */
 .card.hovered {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 14px 38px rgba(240, 169, 100, 0.65);
@@ -223,7 +226,7 @@ body {
   transform: scale(1.07);
 }
 
-/* Sección acerca - texto centrado */
+/* Sección Acerca de */
 .about-section.dark-bg-full p {
   font-family: 'Georgia', serif;
   font-size: 1.22rem;
@@ -233,7 +236,7 @@ body {
   color: #ddd;
 }
 
-/* Footer */
+/* Pie de página */
 .footer {
   background-color: var(--negro-mate);
   padding: 1.5rem 2rem;
@@ -268,7 +271,7 @@ body {
   color: var(--ocre);
 }
 
-/* Botón centrado para página principal */
+/* Botón centrado debajo de galería */
 .btn-container {
   margin-top: 2.5rem;
   text-align: center;
@@ -294,7 +297,7 @@ body {
   color: var(--beige-suave);
 }
 
-/* Responsive */
+/* Responsive: menú móvil */
 @media (max-width: 768px) {
   .nav ul {
     flex-direction: column;
