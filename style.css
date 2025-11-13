@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Paleta cálida y sobria */
+/* Colores cálidos y sobrios */
 :root {
   --negro-mate: #1b1b1b;
   --marron-tierra: #5a3e2b;
@@ -127,19 +127,27 @@ body {
   color: var(--beige-suave);
 }
 
-/* Fondo negro para secciones "Nuestra Colección" y "Acerca" */
-.dark-bg {
-  background-color: #111111;
+/* Fondo negro ancho completo sin margen ni padding */
+.dark-bg-full-width {
+  background-color: var(--negro-mate);
   color: #eee;
-  box-shadow: 0 6px 30px rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 3rem 2rem 6rem;
-  max-width: 1100px;
-  margin: 3rem auto;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
-/* Ajustes color textos en .dark-bg */
-.dark-bg h2 {
+/* Contenedores internos para limitar ancho y centrar */
+.gallery-container,
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Títulos y textos en fondo negro */
+.dark-bg-full-width h2 {
   color: #f0a964; /* cálido claro */
   font-weight: 900;
   font-size: 2.8rem;
@@ -147,30 +155,15 @@ body {
   text-align: center;
   letter-spacing: 1.2px;
 }
-.dark-bg p,
-.dark-bg .price,
-.dark-bg .card h3,
-.dark-bg .card p {
+
+.dark-bg-full-width p,
+.dark-bg-full-width .price,
+.dark-bg-full-width .card h3,
+.dark-bg-full-width .card p {
   color: #ddd;
 }
 
-/* Ajustes para tarjetas en fondo oscuro */
-.dark-bg .gallery .card {
-  background-color: #222222;
-  border-color: #444444;
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.dark-bg .gallery .card:hover,
-.dark-bg .gallery .card.hovered {
-  box-shadow: 0 12px 38px rgba(240, 169, 100, 0.6);
-}
-.dark-bg .gallery .card img {
-  background-color: #111111;
-  border-color: #444444;
-}
-
-/* Grid galería */
+/* Galería grilla */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -179,19 +172,23 @@ body {
 
 /* Tarjetas */
 .card {
+  background-color: #222222;
+  border: 1.8px solid #444444;
   border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
   cursor: pointer;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
   width: 100%;
   height: 210px;
   object-fit: cover;
-  border-bottom: 1.8px solid var(--terracota-suave);
+  border-bottom: 1.8px solid #444444;
   transition: transform 0.3s ease;
   background-color: var(--negro-mate);
 }
@@ -201,6 +198,7 @@ body {
   font-weight: 700;
   font-size: 1.3rem;
   margin: 1.1rem 1.2rem 0.7rem;
+  color: #ddd;
 }
 
 .card p {
@@ -208,6 +206,7 @@ body {
   padding: 0 1.2rem 1.4rem;
   line-height: 1.35;
   flex-grow: 1;
+  color: #ccc;
 }
 
 .price {
@@ -215,6 +214,7 @@ body {
   font-size: 1.1rem;
   padding: 0 1.2rem 1.5rem;
   font-family: 'Georgia', serif;
+  color: #f0a964;
 }
 
 /* Hover tarjetas */
@@ -227,12 +227,13 @@ body {
 }
 
 /* Sección Acerca */
-.about-section {
-  max-width: 750px;
-  margin: 4rem auto 7rem;
+.about-container p {
   font-family: 'Georgia', serif;
   font-size: 1.15rem;
   line-height: 1.65;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #ddd;
 }
 
 /* Pie de página */
