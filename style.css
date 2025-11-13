@@ -17,7 +17,7 @@
   --gris-suave: #777777;
 }
 
-/* Tipografía base */
+/* Tipografía y cuerpo */
 body {
   font-family: "Merriweather", serif, Georgia, serif;
   background-color: var(--beige-suave);
@@ -44,7 +44,7 @@ body {
   text-decoration: underline;
 }
 
-/* Header */
+/* Encabezado */
 .header {
   background-color: var(--negro-mate);
   color: var(--ocre);
@@ -87,8 +87,56 @@ body {
   color: var(--ocre);
 }
 
-/* Sección productos fondo negro */
-.gallery-section.dark-bg-full {
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--terracota-suave), var(--marron-tierra));
+  color: var(--beige-suave);
+  padding: 6rem 2rem 8rem;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  box-shadow: inset 0 0 250px 30px rgba(0,0,0,0.3);
+  user-select: none;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  letter-spacing: 1.8px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto 2.3rem;
+  font-style: italic;
+  line-height: 1.5;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.55);
+}
+
+.btn-primary {
+  background-color: var(--ocre);
+  color: var(--negro-mate);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--terracota-suave);
+  color: var(--beige-suave);
+}
+
+/* Secciones con fondo negro a pantalla completa */
+.dark-bg-full {
   background-color: var(--negro-mate);
   padding: 5rem 0 6rem;
   color: #eee;
@@ -102,8 +150,8 @@ body {
   text-align: center;
 }
 
-/* Títulos y texto */
-.gallery-section.dark-bg-full h2 {
+/* Titulos y texto */
+.dark-bg-full h2 {
   font-weight: 900;
   font-size: 3rem;
   margin-bottom: 3rem;
@@ -112,14 +160,14 @@ body {
   font-family: 'Georgia', serif;
 }
 
-.gallery-section.dark-bg-full p,
-.gallery-section.dark-bg-full .price,
-.gallery-section.dark-bg-full .card h3,
-.gallery-section.dark-bg-full .card p {
+.dark-bg-full p,
+.dark-bg-full .price,
+.dark-bg-full .card h3,
+.dark-bg-full .card p {
   color: #ddd;
 }
 
-/* Grid productos */
+/* Galería con grid */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -130,7 +178,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Tarjetas producto */
+/* Tarjetas */
 .card {
   background-color: #222222;
   border: 1.8px solid #444444;
@@ -177,7 +225,7 @@ body {
   color: #f0a964;
 }
 
-/* Animación hover tarjetas */
+/* Animación hover */
 .card.hovered {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 14px 38px rgba(240, 169, 100, 0.65);
@@ -186,7 +234,17 @@ body {
   transform: scale(1.07);
 }
 
-/* Footer */
+/* Sección acerca */
+.about-section.dark-bg-full p {
+  font-family: 'Georgia', serif;
+  font-size: 1.22rem;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #ddd;
+}
+
+/* Pie de página */
 .footer {
   background-color: var(--negro-mate);
   padding: 1.5rem 2rem;
@@ -221,7 +279,33 @@ body {
   color: var(--ocre);
 }
 
-/* Responsive */
+/* Botón centrado bajo galerías */
+.btn-container {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.btn-center {
+  display: inline-block;
+  background-color: var(--ocre);
+  color: var(--negro-mate);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-center:hover,
+.btn-center:focus {
+  background-color: var(--terracota-suave);
+  color: var(--beige-suave);
+}
+
+/* Responsive para menú móvil */
 @media (max-width: 768px) {
   .nav ul {
     flex-direction: column;
