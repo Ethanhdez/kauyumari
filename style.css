@@ -25,7 +25,16 @@ body {
   line-height: 1.7;
   font-size: 1.1rem;
 }
-
+.logo {
+  color: var(--terracota-suave);
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
 /* Estilo para logo con enlace */
 .logo-link {
   color: var(--terracota-suave);
@@ -329,3 +338,4 @@ body {
     position: relative;
   }
 }
+
