@@ -1,0 +1,275 @@
+/* Reset de márgenes y bordes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables con colores vivos basados en las imágenes */
+:root {
+  --color-primario: #1e89f7; /* azul vibrante */
+  --color-secundario: #f74e1e; /* rojo anaranjado */
+  --color-acento: #42b983; /* verde vivo */
+  --color-fondo: #fffbea; /* beige claro */
+  --color-texto: #333;
+  --color-patron1: #ffcc00; /* amarillo patrón */
+  --color-patron2: #cc0066; /* rosa intenso */
+  --color-patron3: #004466; /* azul oscuro */
+  --color-patron4: #009933; /* verde patrón */
+}
+
+/* Tipografía global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* Encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, var(--color-patron2), var(--color-patron3));
+  padding: 1rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.75rem;
+  letter-spacing: 2px;
+  user-select: none;
+  cursor: default;
+}
+
+/* Menú navegación */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--color-acento);
+  transition: width 0.3s ease;
+}
+.nav ul li a:hover,
+.nav ul li a:focus {
+  color: var(--color-acento);
+}
+.nav ul li a:hover::after,
+.nav ul li a:focus::after {
+  width: 100%;
+}
+
+/* Menu toggle para móviles */
+#menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Sección principal */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 5rem;
+  background: repeating-conic-gradient(
+    from 0deg,
+    var(--color-patron1) 0,
+    var(--color-patron1) 10deg,
+    var(--color-fondo) 10deg,
+    var(--color-fondo) 20deg
+  );
+  color: var(--color-patron3);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--color-acento);
+  color: white;
+  padding: 0.9rem 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-secundario);
+}
+
+/* Galería */
+.gallery-section {
+  padding: 3rem 2rem 5rem;
+  background-color: white;
+  text-align: center;
+}
+.gallery-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  color: var(--color-patron3);
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Tarjetas de productos */
+.card {
+  background: linear-gradient(135deg, var(--color-fondo), #fff);
+  border: 3px solid var(--color-patron4);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.card img {
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 3px solid var(--color-patron4);
+  max-height: 180px;
+}
+.card h3 {
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: var(--color-patron2);
+  font-weight: 700;
+}
+.card p {
+  flex-grow: 1;
+  padding: 0 1rem 1rem 1rem;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
+.price {
+  padding: 0 1rem 1.4rem 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-primario);
+}
+
+/* Animación hover en tarjetas (la animación real viene con JS) */
+.card.hovered {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgb(66 185 131 / 0.6);
+  border-color: var(--color-acento);
+}
+
+/* Sección acerca */
+.about-section {
+  padding: 3rem 2rem 4rem;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-patron4),
+    var(--color-patron4) 5px,
+    var(--color-fondo) 5px,
+    var(--color-fondo) 20px
+  );
+  color: var(--color-patron1);
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+}
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: var(--color-patron3);
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Pie de página */
+.footer {
+  background: var(--color-patron2);
+  padding: 1.5rem 2rem;
+  color: white;
+  text-align: center;
+}
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.social-links a {
+  color: white;
+  margin: 0 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.social-links a:hover,
+.social-links a:focus {
+  color: var(--color-acento);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    background-color: var(--color-patron3);
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 200px;
+    display: none;
+    border-radius: 0 0 0 8px;
+  }
+  .nav ul.show {
+    display: flex;
+  }
+  #menu-toggle {
+    display: block;
+    color: white;
+  }
+  .header {
+    position: relative;
+  }
+}
