@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Paleta cálida, tonos tierra, negro y azules oscuros */
+/* Paleta cálida y sobria */
 :root {
   --negro-mate: #1b1b1b;
   --marron-tierra: #5a3e2b;
@@ -127,28 +127,50 @@ body {
   color: var(--beige-suave);
 }
 
-/* Sección galería */
-.gallery-section {
-  background-color: var(--beige-suave);
+/* Fondo negro para secciones "Nuestra Colección" y "Acerca" */
+.dark-bg {
+  background-color: #111111;
+  color: #eee;
+  box-shadow: 0 6px 30px rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
   padding: 3rem 2rem 6rem;
   max-width: 1100px;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(90, 62, 43, 0.15);
-  color: var(--marron-tierra);
-  font-family: 'Georgia', serif;
+  margin: 3rem auto;
 }
 
-.gallery-section h2 {
+/* Ajustes color textos en .dark-bg */
+.dark-bg h2 {
+  color: #f0a964; /* cálido claro */
   font-weight: 900;
   font-size: 2.8rem;
-  margin-bottom: 3rem;
-  letter-spacing: 1.2px;
+  margin-bottom: 2.5rem;
   text-align: center;
-  color: var(--terracota-suave);
+  letter-spacing: 1.2px;
+}
+.dark-bg p,
+.dark-bg .price,
+.dark-bg .card h3,
+.dark-bg .card p {
+  color: #ddd;
 }
 
-/* Grid */
+/* Ajustes para tarjetas en fondo oscuro */
+.dark-bg .gallery .card {
+  background-color: #222222;
+  border-color: #444444;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dark-bg .gallery .card:hover,
+.dark-bg .gallery .card.hovered {
+  box-shadow: 0 12px 38px rgba(240, 169, 100, 0.6);
+}
+.dark-bg .gallery .card img {
+  background-color: #111111;
+  border-color: #444444;
+}
+
+/* Grid galería */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -157,11 +179,7 @@ body {
 
 /* Tarjetas */
 .card {
-  background-color: var(--beige-suave);
-  border: 1.8px solid var(--terracota-suave);
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(90, 62, 43, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -183,11 +201,9 @@ body {
   font-weight: 700;
   font-size: 1.3rem;
   margin: 1.1rem 1.2rem 0.7rem;
-  color: var(--marron-tierra);
 }
 
 .card p {
-  color: var(--gris-suave);
   font-size: 1rem;
   padding: 0 1.2rem 1.4rem;
   line-height: 1.35;
@@ -195,17 +211,16 @@ body {
 }
 
 .price {
-  padding: 0 1.2rem 1.5rem;
   font-weight: 700;
   font-size: 1.1rem;
-  color: var(--terracota-suave);
+  padding: 0 1.2rem 1.5rem;
   font-family: 'Georgia', serif;
 }
 
-/* Hover efectos */
+/* Hover tarjetas */
 .card.hovered {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 12px 38px rgba(166, 105, 71, 0.55);
+  box-shadow: 0 12px 38px rgba(240, 169, 100, 0.6);
 }
 .card.hovered img {
   transform: scale(1.07);
@@ -215,23 +230,9 @@ body {
 .about-section {
   max-width: 750px;
   margin: 4rem auto 7rem;
-  background-color: var(--beige-suave);
-  border-left: 6px solid var(--terracota-suave);
-  box-shadow: 0 7px 20px rgba(90, 62, 43, 0.15);
-  padding: 2.5rem 3rem;
   font-family: 'Georgia', serif;
-  color: var(--marron-tierra);
   font-size: 1.15rem;
   line-height: 1.65;
-}
-
-.about-section h2 {
-  font-weight: 900;
-  font-size: 2.6rem;
-  margin-bottom: 1.3rem;
-  letter-spacing: 1.4px;
-  color: var(--marron-tierra);
-  text-align: left;
 }
 
 /* Pie de página */
