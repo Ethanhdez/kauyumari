@@ -203,17 +203,18 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Imagen de producto ajustada para no cortarse y centrada */
+/* Imagen para mostrar completa sin recorte y centrada */
 .card img {
   width: 100%;
   height: 210px;
-  object-fit: contain;           /* muestra la imagen completa sin recortar */
-  object-position: center;       /* centra la imagen */
+  object-fit: contain;         /* Muestra la imagen completa */
+  object-position: center;     /* Centra la imagen */
+  background-color: #fff;      /* Fondo blanco para espacios vacíos */
   border-bottom: 1.8px solid #444444;
   transition: transform 0.3s ease;
-  background-color: var(--negro-mate);
 }
 
+/* Información producto */
 .card h3 {
   font-family: 'Palatino Linotype', serif;
   font-weight: 700;
@@ -247,7 +248,7 @@ body {
   transform: scale(1.07);
 }
 
-/* Sección Acerca */
+/* Sección acerca */
 .about-section.dark-bg-full p {
   font-family: 'Georgia', serif;
   font-size: 1.22rem;
@@ -292,7 +293,7 @@ body {
   color: var(--ocre);
 }
 
-/* Botón centrado debajo galerías */
+/* Botón centrado bajo galerías */
 .btn-container {
   margin-top: 2.5rem;
   text-align: center;
